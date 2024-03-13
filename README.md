@@ -188,7 +188,7 @@ In the condition, pDC+BHK, we want to see if pDC in direct contact with BHK (inf
 
 ## Contributors and Contacts
 
-For more informations, please contact [Ariane Paradan](ariane.paradan@etu.univ-lyon1.fr "Email"), [Rayann Larbi](rayann.larbi@etu.univ-lyon1.fr "Email") and [Jordan Dutel](jordan.dutel@etu.univ-lyon1.fr "Email") 
+For more informations, please contact Ariane Paradan (ariane.paradan@etu.univ-lyon1.fr), Rayann Larbi (rayann.larbi@etu.univ-lyon1.fr) and Jordan Dutel (jordan.dutel@etu.univ-lyon1.fr)
 
 
 ***
