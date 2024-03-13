@@ -17,6 +17,9 @@
   - [Alignment](#alignment)
   - [BHK Contaminant](#bhk-contaminant)
 - [Conclusion](#conclusion)
+- [References](#references)
+- [Contacts](#contacts)
+
 
 ***
 
@@ -180,6 +183,13 @@ In the condition, pDC+BHK, we want to see if pDC in direct contact with BHK (inf
 ***
 
 ## Conclusion
+
+***
+
+## Contacts
+
+For more informations, please contact ariane.paradan@etu.univ-lyon1.fr ; rayann.larbi@etu.univ-lyon1.fr and jordan.dutel@etu.univ-lyon1.fr
+
 
 ***
 
