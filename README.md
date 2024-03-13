@@ -17,8 +17,8 @@
   - [Alignment](#alignment)
   - [BHK Contaminant](#bhk-contaminant)
 - [Conclusion](#conclusion)
-- [References](#references)
-- [Contacts](#contacts)
+- [Contributors and Contacts](#contributors-and-contacts)
+- [Ressources](#ressources)
 
 
 ***
