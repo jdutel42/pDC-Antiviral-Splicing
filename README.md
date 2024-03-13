@@ -1,5 +1,4 @@
 # Project_2
-===========
 
 ## Introduction
 
@@ -13,18 +12,18 @@ To respond to the question asked by project leaders, we have set up a RNAseq ana
 
 In order to look at the quality of sequencing file before any further investigation, we’ve controlled reads quality for each file.
 
-**\_Command line:\_**
+Command line:
 
 ```
 fastqc --noextract input_file_R1.fastq.gz input_file_R2.fastq.gz
 
 ```
 
-**\_Arguments:\_**
---noextract : Keep input file in .gz format to ease data manipulation during the pipeline
+Arguments:
+_--noextract_ : Keep input file in .gz format to ease data manipulation during the pipeline
 
 
-MultiQC
+#### MultiQC
 
 After inspecting each file with fastqc, we have resumed fastqc analysis with a multiqc to have a global view of the dataset provided. We gathered .fastqc reports on one directory : 
 
