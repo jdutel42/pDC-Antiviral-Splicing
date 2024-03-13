@@ -1,7 +1,5 @@
 # Project_2
 
-Délivrable n°1
-
 ## Introduction
 
 To respond to the question asked by project leaders, we have set up a RNAseq analysis pipeline. This workflow is composed of classical steps in RNA sequencing analysis. To do that, we looked at several studies (REFFFFFS) and their different steps in RNAseq analysis to understand how we could apply these steps to our biologic problem. This led us to establish first a pipeline (Cf Workflow and pipeline), supposed to highlight alternative splicing events in data provided. For simplicity and better efficacy, we have concentrated our efforts and work on one condition first. It corresponds to pDC’s RNA only. We discard for now, pDC+BHK condition because it required a higher step of data cleaning and preprocessing to be analyzed properly. Indeed, it’s necessary to remove contaminant BHK’s RNA from pDC’s RNA. So we concentrate here on the condition RNA of pDC only, because it is way more simple. Furthermore, we have performed the following pipeline on a reduced dataset of this condition. That’s right, datafiles are very heavy and contain a lot of information. So, with advices of our project tutor, Mr Lacroix, we run the pipeline on the first 10 000 reads of each files of this condition. It allows us to test and find the best commands for each tool without spending too much computing time.
@@ -14,14 +12,14 @@ To respond to the question asked by project leaders, we have set up a RNAseq ana
 
 In order to look at the quality of sequencing file before any further investigation, we’ve controlled reads quality for each file.
 
-**Command line:**
+**\_Command line:\_**
 
 ```
 fastqc --noextract input_file_R1.fastq.gz input_file_R2.fastq.gz
 
 ```
 
-**Arguments:**
+**\_Arguments:\_**
 --noextract : Keep input file in .gz format to ease data manipulation during the pipeline
 
 
