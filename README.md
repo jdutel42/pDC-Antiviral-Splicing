@@ -1,4 +1,4 @@
-# Project_2
+# Bio-informatic Project_2
 
 ## Table of contents
 
@@ -25,7 +25,16 @@
 
 ## Introduction
 
+**Context**
+
 To respond to the question asked by project leaders, we have set up a RNAseq analysis pipeline. This workflow is composed of classical steps in RNA sequencing analysis. To do that, we looked at several studies (REFFFFFS) and their different steps in RNAseq analysis to understand how we could apply these steps to our biologic problem. This led us to establish first a pipeline (Cf Workflow and pipeline), supposed to highlight alternative splicing events in data provided. For simplicity and better efficacy, we have concentrated our efforts and work on one condition first. It corresponds to pDC’s RNA only. We discard for now, pDC+BHK condition because it required a higher step of data cleaning and preprocessing to be analyzed properly. Indeed, it’s necessary to remove contaminant BHK’s RNA from pDC’s RNA. So we concentrate here on the condition RNA of pDC only, because it is way more simple. Furthermore, we have performed the following pipeline on a reduced dataset of this condition. That’s right, datafiles are very heavy and contain a lot of information. So, with advices of our project tutor, Mr Lacroix, we run the pipeline on the first 10 000 reads of each files of this condition. It allows us to test and find the best commands for each tool without spending too much computing time.
+
+**Aims of this project**
+
+1. Does quality and depth of dataset provide are sufficient to detect any signals of differential alternative splicing between conditions ?
+
+2. Is there alternative splicing remodelling between conditions ? And which genes are concerned ?
+
 
 ***
 
@@ -188,8 +197,25 @@ In the condition, pDC+BHK, we want to see if pDC in direct contact with BHK (inf
 
 ## Contributors and Contacts
 
-For more informations, please contact Ariane Paradan (ariane.paradan@etu.univ-lyon1.fr), Rayann Larbi (rayann.larbi@etu.univ-lyon1.fr) and Jordan Dutel (jordan.dutel@etu.univ-lyon1.fr)
+### **Project contributors**
 
+For more informations, please contact :  
+- Ariane Paradan (ariane.paradan@etu.univ-lyon1.fr)  
+- Rayann Larbi (rayann.larbi@etu.univ-lyon1.fr)  
+- Jordan Dutel (jordan.dutel@etu.univ-lyon1.fr)  
+
+Master Bioinfo@Lyon
+
+![img/BioinfoLyon.png](img/BioinfoLyon.png)
+
+### **Project leaders**
+
+Delphine Galiana, Team VIV, CIRI (delphine.galiana@ens-lyon.fr)  
+Camille Daligault, Team VIV, CIRI (camille.daligault@ens-lyon.fr)
+
+### **Project tutor**
+
+Vincent Lacroix, Team Baobab, LBBE (vincent.lacroix@univ-lyon1.fr)
 
 ***
 
