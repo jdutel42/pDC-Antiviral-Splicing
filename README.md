@@ -4,13 +4,13 @@
 
 - [Introduction](#introduction)
 - [Workflow and pipeline](#workflow-and-pipeline)
-  - [Control quality and trimming](#control-quality-and-trimming)
-    - [FastQC](#fastqc)
-    - [MultiQC](#multiqc)
-    - [Trimmomatic](#trimmomatic)
-  - [Mapping](#mapping)
-  - [Detection of alternative splicing events](#detection-of-alternative-splicing-events)
-  - [Results representation](#results-representation)
+  - [Control quality and trimming](#1-control-quality-and-trimming)
+    - [FastQC](#11-fastqc)
+    - [MultiQC](#12-multiqc)
+    - [Trimmomatic](#13-trimmomatic)
+  - [Mapping](#2-mapping)
+  - [Detection of alternative splicing events](#3-detection-of-alternative-splicing-events)
+  - [Results representation](#4-results-representation)
 - [Results](#results)
 - [Challenges](#challenges)
   - [Reads Quality](#reads-quality)
@@ -40,9 +40,9 @@ To respond to the question asked by project leaders, we have set up a RNAseq ana
 
 ## Workflow and pipeline
 
-### Control quality and trimming
+### 1. Control quality and trimming
 
-#### FastQC
+#### 1.1. FastQC
 
 In order to look at the quality of sequencing file before any further investigation, we’ve controlled reads quality for each file.
 
@@ -56,7 +56,7 @@ fastqc --noextract input_file_R1.fastq.gz input_file_R2.fastq.gz
 
 
 
-#### MultiQC
+#### 1.2. MultiQC
 
 After inspecting each file with fastqc, we have resumed fastqc analysis with a multiqc to have a global view of the dataset provided. We gathered .fastqc reports in one directory: 
 
@@ -66,7 +66,7 @@ After inspecting each file with fastqc, we have resumed fastqc analysis with a m
 multiqc .
 ```
 
-#### Trimmomatic
+#### 1.3. Trimmomatic
 
 As shown with fastqc/multiqc reports, a high proportion of adapters is present in reads. We need to trim these adapters. To do these steps we have chosen Trimmomatic tools. Command line can contains a lot of options allowing to highly personalized command line.
 
@@ -91,7 +91,7 @@ trimmomatic PE -threads 30 input_R1.fastq.gz input_R2_.fastq.gz output_R1_Trimme
 After this trimming step, we performed another fastqc/multiqc analysis to verify that all adapters have been removed and quality of reads are enough to perform mapping.
 
 
-### Mapping
+### 2. Mapping
 
 To map reads, we have used STAR. This is a splice-aware mapping tool. It can map RNAseq derived reads to a reference genome and consider reads matching on exons between introns.
 
@@ -111,7 +111,7 @@ STAR --runThreadN 8 --genomeDir hg38_StarIndex --sjdbGTFfile hg38_annotations.gt
   - `--outFileNamePrefix [label]`: Add a label for the file to have consistent naming.
 
 
-### Detection of alternative splicing events
+### 3. Detection of alternative splicing events
 
 To analyze splicing events, we use a popular tool: rMATS. This tool will use reads aligned by STAR and search for differences in different types of alternative splicing events between 2 conditions (skipping exon, alternative 3’ and 5’ alternative splicing sites, mutually exclusive exons, and intron retention).
 
@@ -129,7 +129,7 @@ To analyze splicing events, we use a popular tool: rMATS. This tool will use rea
   - `--variable-read-length`: Allow reads to have a length that differs from the --readLength option. This is the case here because trimming output different length for our reads.
 
 
-### Results representation
+### 4. Results representation
 
 rmats2sashimiplot is an extension of rMATS that uses rMATS outputs and represents splicing events with a Sashimi plot.
 
