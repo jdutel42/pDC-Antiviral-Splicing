@@ -46,12 +46,12 @@ To respond to the question asked by project leaders, we have set up a RNAseq ana
 
 In order to look at the quality of sequencing file before any further investigation, we’ve controlled reads quality for each file.
 
-- Command line:
+- ***Command line:***
 
 ```
 fastqc --noextract input_file_R1.fastq.gz input_file_R2.fastq.gz
 ```
-- Arguments:
+- ***Arguments:***
   - `--noextract` : Keep input file in .gz format to ease data manipulation during the pipeline
 
 
@@ -60,8 +60,7 @@ fastqc --noextract input_file_R1.fastq.gz input_file_R2.fastq.gz
 
 After inspecting each file with fastqc, we have resumed fastqc analysis with a multiqc to have a global view of the dataset provided. We gathered .fastqc reports in one directory: 
 
-- Command line:
-
+- ***Command line:***
 ```
 multiqc .
 ```
@@ -70,13 +69,13 @@ multiqc .
 
 As shown with fastqc/multiqc reports, a high proportion of adapters is present in reads. We need to trim these adapters. To do these steps we have chosen Trimmomatic tools. Command line can contains a lot of options allowing to highly personalized command line.
 
-- Command line:
+- ***Command line:***
 ```
 trimmomatic PE -threads 30 input_R1.fastq.gz input_R2_.fastq.gz output_R1_TrimmedPaired.fastq.gz output_R1_TrimmedUnpaired.fastq.gz output_R2_TrimmedPaired.fastq.gz output_R2_TrimmedUnpaired.fastq.gz ILLUMINACLIP:directory/to/adapters/TruSeq3-PE.fa:2:30:10:11:true
 ```
 
 
-- Arguments:
+- ***Arguments:***
   - `PE`: Indicate to Trimmomatic to treat input file as Paired End (PE) data.
   - `output`: 4 different file names must be provided to store trimmed reads according to input files (R1 or R2) and according to their processing by trimmomatic. For one input paired read, Trimmomatic can keep after trimming, the both reads (TrimmedPaired) or only one reads, orphan reads, because the quality of his mate is very too low (TrimmedUnpaired).
   - `ILLUMINACLIP`: Specified step to remove Illumina adapters.
@@ -95,14 +94,14 @@ After this trimming step, we performed another fastqc/multiqc analysis to verify
 
 To map reads, we have used STAR. This is a splice-aware mapping tool. It can map RNAseq derived reads to a reference genome and consider reads matching on exons between introns.
 
-- Command line:
+- ***Command line:***
 
 ```
 STAR --runThreadN 8 --genomeDir hg38_StarIndex --sjdbGTFfile hg38_annotations.gtf --readFilesCommand gunzip -c --readFilesIn input_R1_TrimmedPaired.fastq.gz input_R2_TrimmedPaired.fastq.gz --outSAMtype BAM SortedByCoordinate --quantMode GeneCounts --outFileNamePrefix [label]
 ```
 
 
-- Arguments:
+- ***Arguments:***
   - `--genomeDir`: Path to the genome index created with STAR. We work here with the hg38 Homo Sapiens genome.
   - `-sjdbGTFfile`: Path to the annotation file (GTF). As the genome is hg38 version, we have provided here the GTF file associated to the hg38 genome.
   - `--readFilesCommand gunzip -c`: This allows STAR to read fastq.gz files without uncompressing the file, and eases their manipulation.
@@ -115,13 +114,13 @@ STAR --runThreadN 8 --genomeDir hg38_StarIndex --sjdbGTFfile hg38_annotations.gt
 
 To analyze splicing events, we use a popular tool: rMATS. This tool will use reads aligned by STAR and search for differences in different types of alternative splicing events between 2 conditions (skipping exon, alternative 3’ and 5’ alternative splicing sites, mutually exclusive exons, and intron retention).
 
-- Command line:
+- ***Command line:***
 
 ```
  rmats.py --b1 bam1.txt --b2 bam2.txt --gtf hg38_annotations.gtf -t paired --nthread 25 --od . --tmp tmp/ --variable-read-length --readLength 100
 ```
 
-- Arguments:
+- ***Arguments:***
   - `--b1 / --b2`: These are .txt files containing paths to .bam files. Replicates were separated by a “,”.
   - `--gtf`: Path to the .gtf annotation file used during the mapping step with STAR.
   - `-t paired`: Specify to rMATS that data are paired-end.
@@ -133,13 +132,13 @@ To analyze splicing events, we use a popular tool: rMATS. This tool will use rea
 
 rmats2sashimiplot is an extension of rMATS that uses rMATS outputs and represents splicing events with a Sashimi plot.
 
-- Command line:
+- ***Command line:***
 
 ```
 rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.MATS.JCEC.txt --b1 bam1.sortedByCoord.out.bam --b2 bam2.sortedByCoord.out.bam
 ```
 
-- Arguments:
+- ***Arguments:***
   - `--l1 / --l2`: Add a label to results samples.
   - `--event-type SE`: Specify the type of event to represent. SE means “Skipping Event.”
   - `-e`: Path to the rMATS output file associated with the type of event.
