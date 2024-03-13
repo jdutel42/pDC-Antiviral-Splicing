@@ -78,7 +78,6 @@ trimmomatic PE -threads 30 input_R1.fastq.gz input_R2_.fastq.gz output_R1_Trimme
 
 After this trimming step, we performed another fastqc/multiqc analysis to verify that all adapters have been removed and quality of reads are enough to perform mapping.
 
-***
 
 ### Mapping
 
@@ -99,7 +98,6 @@ STAR --runThreadN 8 --genomeDir hg38_StarIndex --sjdbGTFfile hg38_annotations.gt
   - `--quantMode GeneCounts`: Option specified to STAR to output an additional file where counts are saved for each gene presenting a read alignment.
   - `--outFileNamePrefix [label]`: Add a label for the file to have consistent naming.
 
-***
 
 ### Detection of alternative splicing events
 
@@ -118,7 +116,6 @@ To analyze splicing events, we use a popular tool: rMATS. This tool will use rea
   - `--readLength 100`: Indication to rMATS to estimate reads length for the calculation of inclusion of junction reads and other parameters.
   - `--variable-read-length`: Allow reads to have a length that differs from the --readLength option. This is the case here because trimming output different length for our reads.
 
-***
 
 ### Results representation
 
@@ -139,6 +136,9 @@ rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.
 ***
 
 ## Results
+
+- Liste de gène différentiellement épissé
+- Petite étude biologique de un ou certains gènes inpliqué dans la biologie des pDC
 
 ***
 
