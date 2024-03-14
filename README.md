@@ -11,7 +11,10 @@
   - [Mapping](#2-mapping)
   - [Detection of alternative splicing events](#3-detection-of-alternative-splicing-events)
   - [Results representation](#4-results-representation)
-- [Results](#results)
+- [Preliminary Analysis](#preliminary-analysis)
+  - [GO Diagram](#go-diagram)
+  - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+- [In-depth Analysis](#in-depth-analysis)
 - [Challenges](#challenges)
   - [Reads Quality](#reads-quality)
   - [Alignment](#alignment)
@@ -145,8 +148,14 @@ rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.
   - `--b1 / --b2`: Path to .bam files output by STAR.
 
 ***
+## Preliminary Analysis
 
-## Results
+### GO Diagram
+
+### Principal Component Analysis (PCA)
+
+
+## In-depth Analysis
 
 - Liste de gène différentiellement épissé
 - Petite étude biologique de un ou certains gènes inpliqué dans la biologie des pDC
