@@ -3,6 +3,9 @@
 ## Table of contents
 
 - [Introduction](#introduction)
+  - [Context](#context) 
+  - [Dataset description](#dataset-description) 
+  - [Aims of this project](#aims-of-this-project) 
 - [Workflow and pipeline](#workflow-and-pipeline)
   - [Control quality and trimming](#1-control-quality-and-trimming)
     - [FastQC](#11-fastqc)
@@ -28,11 +31,13 @@
 
 ## Introduction
 
-**Context**
+### Context
 
 To respond to the question asked by project leaders, we have set up a RNAseq analysis pipeline. This workflow is composed of classical steps in RNA sequencing analysis. To do that, we looked at several studies (REFFFFFS) and their different steps in RNAseq analysis to understand how we could apply these steps to our biologic problem. This led us to establish first a pipeline (Cf Workflow and pipeline), supposed to highlight alternative splicing events in data provided. For simplicity and better efficacy, we have concentrated our efforts and work on one condition first. It corresponds to pDC’s RNA only. We discard for now, pDC+BHK condition because it required a higher step of data cleaning and preprocessing to be analyzed properly. Indeed, it’s necessary to remove contaminant BHK’s RNA from pDC’s RNA. So we concentrate here on the condition RNA of pDC only, because it is way more simple. Furthermore, we have performed the following pipeline on a reduced dataset of this condition. That’s right, datafiles are very heavy and contain a lot of information. So, with advices of our project tutor, Mr Lacroix, we run the pipeline on the first 10 000 reads of each files of this condition. It allows us to test and find the best commands for each tool without spending too much computing time.
 
-**Aims of this project**
+### Dataset description
+
+### Aims of this project
 
 1. Does quality and depth of dataset provide are sufficient to detect any signals of differential alternative splicing between conditions ?
 
@@ -148,12 +153,31 @@ rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.
   - `--b1 / --b2`: Path to .bam files output by STAR.
 
 ***
+
 ## Preliminary Analysis
 
 ### GO Diagram
 
+Expliquer pourquoi on a fait le diagramme GO et à quoi ça sert/principe et comment on a fait :
+
+Here is the full GO diagram :
+![img/GO_diagram_full.png.png](img/GO_diagram_full.png)
+
+Here are some zoom of GO diagram :
+![img/Go_diagram_zoom1.png](img/Go_diagram_zoom1.png)
+![img/Go_diagram_zoom2.png](img/Go_diagram_zoom2.png)
+![img/Go_diagram_zoom3.png](img/Go_diagram_zoom3.png)
+
+We can see that most parts of the diagram represent immune process. As a matter of fact, we can found some Gene Ontology corresponding to "regulation of type 1 interferon production", "activation of innate immune response", "cytokine-mediated signaling pathway", "immune response-regulating cell surface receptor signaling pathway"
+These terms tend to refer to functions found in pDC (type 1 interferon signaling and cytokine signaling)
+
+This GO diagram comforts us with the idea that reads sequenced seems to be representative and reflect well the biology of pDC. We don't see here a bias in our dataset.  
+
 ### Principal Component Analysis (PCA)
 
+
+
+***
 
 ## In-depth Analysis
 
