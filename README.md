@@ -167,7 +167,7 @@ rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.
 
 ### GO Diagram
 
-Expliquer pourquoi on a fait le diagramme GO et à quoi ça sert/principe et comment on a fait :
+According to the [Gene Ontology Consortium](https://geneontology.org/) “The Gene Ontology (GO) describes our knowledge of the biological domain with respect to three aspects: Molecular Function, Cellular Component, Biological Process”. GO applied to our data could be an excellent method to see if the sequencing and genes expressed in our dataset assess well the biology of pDC cells. To achieve this, for one of the replicate files, we have taken gene counts output by STAR, sort genes by their abundance and we have compiled in a list the first 50.000 most expressed gene ID. After that, we have used [GOrilla](https://cbl-gorilla.cs.technion.ac.il/), a web application capable of translating genes ID into GO terms and identified enriched GO terms in this list. GOrilla outputs a graph that sums up the biology process, molecular functions and cellular component, captured by the sequencing. To run GOrilla we have indicated that the organism species is “Homo Sapiens”, the gene ID list is a “Single ranked list of genes”, that we wanted to see “All” ontology with P-value not higher than 10⁻³.
 
 Here is the full GO diagram :
 ![img/GO_diagram_full.png.png](img/GO_diagram_full.png)
