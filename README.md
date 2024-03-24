@@ -188,6 +188,7 @@ In order to look at any signals in our dataset, we have performed a Principal Co
 After that, with R, we gathered all abundance.tsv files and preserved only “traget_id” and “tpm” columns. Only transcripts with a TPM > 0.5 were preserved to filtered out too low expressed transcripts. This treshold is totally arbitrary, there is no perfect threshold, but with some research in the bioinformatic community and forum, we have concluded that  is not to high but sufficient to remove low transcripts expression. We then merge all abundance file for each replicate by their identical target_id and NA values were replaced by 0. Finally, we use the R function “prcomp” in R, to perform the PCA on transcript.
 
 The PCA can be seen here : 
+
 ![img/PCA_transcripts.jpeg](img/PCA_transcripts.jpeg)
 
 Interprétation : 
