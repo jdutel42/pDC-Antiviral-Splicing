@@ -92,7 +92,7 @@ By looking at raw data with the FastQC tool, we have seen really interesting fea
 In the same way, we have found, in several _R2.fastq (reversed reads complementary to forward reads), overexpressed sequences that seem to correspond to poly guanine expression. Here an example : 
 
 ![img/fastqc_overrepresented_sequences_plot.png](img/fastqc_overrepresented_sequences_plot.png)
-![img/Overexpressed_sequences.png](img/Overexpressed_sequences.png)
+![img/Overexpressed_sequences_multiqc.png](img/Overexpressed_sequences.png)
 
 With some researches, we have found that these overexpressed sequences are often found in sequencing data from Illumina sequencers NovaSeq/NextSeq. According to some users on [this](https://www.biostars.org/p/9499939/) BioStar forums "Poly-G reads represent cluster producing no signal in two-color chemistry" like we found in these sequencers. These informations are confirmed too on [this](https://www.researchgate.net/post/What_can_cause_poly-G_tails_on_NextSeq_fastq_from_seemingly_failed_libraries) ResearchGate forum. We think that may be the reasons of what we can see with G content in 3' end and with overexpressed sequences in our data.
 As these overexpressed sequences are not highly expressed in our dataset (only around ~0.20% of total sequences), this will not bias our analysis, and with a trimming step, these sequences will be removed. But it seems important to us to understand from what this can arise from, can this have an impact on our analysis, and inform project leader that this could probably happen in their next analysis.
