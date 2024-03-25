@@ -17,6 +17,8 @@
 - [Preliminary Analysis](#preliminary-analysis)
   - [GO Diagram](#go-diagram)
   - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
+    - [PCA on transcript counts](#pca-on-transcript-counts)
+    - [PCA on expressed gene counts](#pca-on-expressed-gene-counts)  
 - [In-depth Analysis](#in-depth-analysis)
 - [Challenges](#challenges)
   - [Reads Quality](#reads-quality)
@@ -184,6 +186,8 @@ This GO diagram comforts us with the idea that reads sequenced seems to be repre
 
 ### Principal Component Analysis (PCA)
 
+#### PCA on transcript counts
+
 In order to look at any signals in our dataset, we have performed a Principal Component Analysis (PCA) on the count of each transcription in the different conditions. To do that, we have begun by doing a pseudo-alignment with [Kallisto](https://pachterlab.github.io/kallisto/) for each condition with the quant mode activated in order to collect all transcripts counts. Pseudo-alignement was performed on the human transcriptome from Ensembl
 After that, with R, we gathered all abundance.tsv files and preserved only “traget_id” and “tpm” columns. Only transcripts with a TPM > 0.5 were preserved to filtered out too low expressed transcripts. This treshold is totally arbitrary, there is no perfect threshold, but with some research in the bioinformatic community and forum, we have concluded that  is not to high but sufficient to remove low transcripts expression. We then merge all abundance file for each replicate by their identical target_id and NA values were replaced by 0. Finally, we use the R function “prcomp” in R, to perform the PCA on transcript.
 
@@ -195,6 +199,7 @@ Interprétation :
 
 As we can see in the figure, all points are clustered together. It is impossible to distinguish and separate the different conditions from each other. This could be interpreted as a lack of signal in our data between conditions. However, we must take these results with a pinch of salt. Indeed, maybe somehow, our PCA on transcripts is not well executed or something that we didn’t understand could lead to these specific results. It is difficult to have a clear conclusion and further analysis need to be done to say that there is no signal in our dataset, yet this can be a first clue for a sequencing depth too low to see differences between conditions. 
 
+#### PCA on expressed gene counts
 
 ***
 
