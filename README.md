@@ -73,11 +73,11 @@ To respond to these question asked by our project leaders, we have set up a comp
 ***
 ## Pipeline
 
-After, these preliminary analyses we conducted the full pipeline. First, we performed trimming of adapters and poor-quality reads using the Trimmomatic tool. These cleaned reads were then mapped against the human genome via a splice-aware mapper, STAR. Afterwards, these mapped reads were given to rMATS, a software for detecting alternative splicing events. rMATS outputs different types of events, and we have visualized all of this with various tools such as IGV and rmats2sashimiplot.
+Following the preliminary analyses, we conducted the full pipeline. First, we performed trimming of adapters and poor-quality reads using the Trimmomatic tool. These cleaned reads were then mapped against the human genome via a splice-aware mapper, STAR. Afterwards, these mapped reads were given to rMATS, a software for detecting alternative splicing events. rMATS outputs different types of events, and we have visualized all of this with various tools such as IGV and rmats2sashimiplot.
 
 ![img/Pipeline_flowchart.png](img/Pipeline_flowchart.png)
 
-### 1. Control quality and trimming
+### 1. Quality control and trimming
 
 #### 1.1. FastQC
 
@@ -103,7 +103,7 @@ multiqc .
 
 #### 1.3. Trimmomatic
 
-As shown with fastqc/multiqc reports, a high proportion of adapters is present in reads. We need to trim these adapters. To do these steps we have chosen Trimmomatic tools. Command line can contains a lot of options allowing to highly personalized command line.
+As shown with fastqc/multiqc reports, a high proportion of adapters is present in reads. We need to trim these adapters. For this step we have chosen Trimmomatic tools. Command line offers a lot of options, allowing for highly personalized command line.
 
 - ***Command line:***
 ```
