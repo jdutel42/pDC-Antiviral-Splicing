@@ -188,17 +188,17 @@ rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.
 
 ### GO Diagram
 
-According to the [Gene Ontology Consortium](https://geneontology.org/) “The Gene Ontology (GO) describes our knowledge of the biological domain with respect to three aspects: Molecular Function, Cellular Component, Biological Process”. GO applied to our data could be an excellent method to see if the sequencing and genes expressed in our dataset assess well the biology of pDC cells. To achieve this, for one of the replicate files, we have taken gene counts output by STAR, sort genes by their abundance and we have compiled in a list the first 50.000 most expressed gene ID. After that, we have used [GOrilla](https://cbl-gorilla.cs.technion.ac.il/), a web application capable of translating genes ID into GO terms and identified enriched GO terms in this list. GOrilla outputs a graph that sums up the biology process, molecular functions and cellular component, captured by the sequencing. To run GOrilla we have indicated that the organism species is “Homo Sapiens”, the gene ID list is a “Single ranked list of genes”, that we wanted to see “All” ontology with P-value not higher than 10⁻³.
+According to the [Gene Ontology Consortium](https://geneontology.org/) “The Gene Ontology (GO) describes our knowledge of the biological domain with respect to three aspects: Molecular Function, Cellular Component, Biological Process”. GO applied to our data could be an excellent method to see if the sequencing and genes expressed in our dataset assess well the biology of pDC cells. To achieve this, for one of the replicate files, we have taken gene counts output by STAR, sorted genes by their abundance and we have compiled in a list the first 50.000 most expressed gene ID. After that, we have used [GOrilla](https://cbl-gorilla.cs.technion.ac.il/), a web application capable of translating gene ID into GO terms and identify enriched GO terms in this list. GOrilla outputs a graph that sums up the biology process, molecular functions and cellular component, captured by the sequencing. To run GOrilla we have indicated that the organism species is “Homo Sapiens”, the gene ID list is a “Single ranked list of genes”, that we wanted to see “All” ontology with P-value not higher than 10⁻³.
 
-Here is the full GO diagram :
+Here is the full GO diagram:
 ![img/GO_diagram_full.png.png](img/GO_diagram_full.png)
 
-Here are some zoom of GO diagram :
+Here are some zoom of GO diagram:
 ![img/Go_diagram_zoom1.png](img/Go_diagram_zoom1.png)
 ![img/Go_diagram_zoom2.png](img/Go_diagram_zoom2.png)
 ![img/Go_diagram_zoom3.png](img/Go_diagram_zoom3.png)
 
-We can see that most parts of the diagram represent immune process. As a matter of fact, we can found some Gene Ontology corresponding to "regulation of type 1 interferon production", "activation of innate immune response", "cytokine-mediated signaling pathway", "immune response-regulating cell surface receptor signaling pathway"
+We can see that most parts of the diagram represent the immune process. As a matter of fact, we can find some Gene Ontology corresponding to "regulation of type 1 interferon production", "activation of innate immune response", "cytokine-mediated signaling pathway", "immune response-regulating cell surface receptor signaling pathway"...
 These terms tend to refer to functions found in pDC (type 1 interferon signaling and cytokine signaling)
 
 This GO diagram comforts us with the idea that reads sequenced seems to be representative and reflect well the biology of pDC. We don't see here a bias in our dataset.  
@@ -207,21 +207,21 @@ This GO diagram comforts us with the idea that reads sequenced seems to be repre
 
 #### PCA on transcript counts
 
-In order to look at any signals in our dataset, we have performed a Principal Component Analysis (PCA) on the count of each transcription in the different conditions. To do that, we have begun by doing a pseudo-alignment with [Kallisto](https://pachterlab.github.io/kallisto/) for each condition with the quant mode activated in order to collect all transcripts counts. Pseudo-alignement was performed on the human transcriptome from Ensembl
-After that, with R, we gathered all abundance.tsv files and preserved only “traget_id” and “tpm” columns. Only transcripts with a TPM > 0.5 were preserved to filtered out too low expressed transcripts. This treshold is totally arbitrary, there is no perfect threshold, but with some research in the bioinformatic community and forum, we have concluded that  is not to high but sufficient to remove low transcripts expression. We then merge all abundance file for each replicate by their identical target_id and NA values were replaced by 0. Finally, we use the R function “prcomp” in R, to perform the PCA on transcript.
+In order to identify signals in our dataset, we have performed a Principal Component Analysis (PCA) on the count of each transcription in the different conditions. To do that, we began by doing a pseudo-alignment with [Kallisto](https://pachterlab.github.io/kallisto/) for each condition with the quant mode activated in order to collect all transcripts counts. Pseudo-alignement was performed on the human transcriptome from Ensembl.
+After that, with R, we gathered all abundance.tsv files and preserved only “target_id” and “tpm” columns. Only transcripts with a TPM > 0.5 were preserved to filter out low-expression transcripts. This treshold is arbitrary, there is no perfect threshold, but with some research in the bioinformatics community and forum, we have concluded that the chosen threshold is sufficient to remove low transcript expression. We then merge all abundance files for each replicate by their identical target_id and NA values were replaced by 0. Finally, we use the R function “prcomp” in R, to perform the PCA on transcript.
 
-The PCA can be seen here : 
+The PCA can be seen here: 
 
 ![img/PCA_transcripts.jpeg](img/PCA_transcripts.jpeg)
 
-As we can see in the figure, all points are clustered together. It is impossible to distinguish and separate the different conditions from each other. This could be interpreted as a lack of signal in our data between conditions. However, we must take these results with a pinch of salt. Indeed, maybe somehow, our PCA on transcripts is not well executed or something that we didn’t understand could lead to these specific results. It is difficult to have a clear conclusion and further analysis need to be done to say that there is no signal in our dataset, yet this can be a first clue for a sequencing depth too low to see differences between conditions. 
+As we can see in the figure, all points are clustered together. It is impossible to distinguish and separate the different conditions from each other. This could be interpreted as a lack of signal in our data between conditions. However, we must take these results with precaution. It may be that our PCA on transcripts was not well executed, or something that we didn’t understand or notice could lead to these specific results. It is difficult to have a clear conclusion and further analysis need to be done to confirm that there is no signal in our dataset, yet this can be a first indication of a sequencing depth too low to see differences between conditions. 
 
 #### PCA on expressed gene counts
 
-pDC without BHK  
+pDC without BHK:  
 ![img/PCA_gene_count_pDC_without_BHK.jpeg](img/PCA_gene_count_pDC_without_BHK.jpeg)
 
-pDC with BHK  
+pDC with BHK:  
 ![img/PCA_gene_count_pDC_with_BHK.jpeg](img/PCA_gene_count_pDC_with_BHK.jpeg)
 
 Unlike PCA on transcript counts, PCA on expressed gene counts does show differential clusterization between conditions, which can be interpreted as a signal. Two things are to note however:
