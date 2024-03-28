@@ -100,10 +100,9 @@ As we can see in the figure, all points are clustered together. It is impossible
 #### PCA on expressed gene counts
 
 ***
-## Workflow and pipeline
+## Pipeline and results
 
-A modif : 
-To do that, we looked at several studies (REFFFFFS) and their different steps in RNAseq analysis to understand how we could apply these steps to our biologic problem. This led us to establish first a pipeline (Cf Workflow and pipeline), supposed to highlight alternative splicing events in data provided. For simplicity and better efficacy, we have concentrated our efforts and work on one condition first. It corresponds to pDC’s RNA only. We discard for now, pDC+BHK condition because it required a higher step of data cleaning and preprocessing to be analyzed properly. Indeed, it’s necessary to remove contaminant BHK’s RNA from pDC’s RNA. So we concentrate here on the condition RNA of pDC only, because it is way more simple. Furthermore, we have performed the following pipeline on a reduced dataset of this condition. That’s right, datafiles are very heavy and contain a lot of information. So, with advices of our project tutor, Mr Lacroix, we run the pipeline on the first 10 000 reads of each files of this condition. It allows us to test and find the best commands for each tool without spending too much computing time. After clearly defined a working pipeline, the whole files have been run with the pipeline
+After, these preliminary analyses we conducted the full pipeline. First, we performed trimming of adapters and poor-quality reads using the Trimmomatic tool. These cleaned reads were then mapped against the human genome via a splice-aware mapper, STAR. Afterwards, these mapped reads were given to rMATS, a software for detecting alternative splicing events. rMATS outputs different types of events, and we have visualized all of this with various tools such as IGV and rmats2sashimiplot.
 
 ![img/Pipeline_flowchart.png](img/Pipeline_flowchart.png)
 
