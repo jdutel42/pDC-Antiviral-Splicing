@@ -227,7 +227,7 @@ BHK Contaminant
 Finally, in the condition, pDC+BHK, we want to see if pDC in direct contact with BHK (infected or non infected cells) could lead to different alternatives splicing events. BHK are cells that come from hamster species _Mesocricetus auratus_. However, in order to perform analysis, we need first to remove some BHK contaminants transferred to pDC during the contact. Indeed, during the interferogenic synapse, some RNA of BHK could be transferred to the pDC and contaminate the RNA of pDC. A solution to discard these RNA is to map these mixed RNA (pDC and BKH) on the hamster genome to remove all reads that mapped on this genome, and so, corresponding to contaminants RNA. Then we may use the dataset pDC+BKH separated from BHK originated reads, and pursue the established pipeline. This is necessary if we don’t want to be biased and wrongly allocate expression of genes from BHK to pDC, which could interfere with conclusions. 
 
 
-##### Interpretation
+### Quality Control
 
 By looking at raw data with the FastQC tool, we have seen really interesting features. Indeed, reads before trimming seem to have a disproportionate amount of guanine at the 3' end of reads, like shown: 
 
