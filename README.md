@@ -44,28 +44,29 @@
 
 ### Context
 
-Since last decades, cities expansion and human activities have led humans to interact with more and more species that we haven't face yet. This interaction with different species show us that zoonoses (like virus with CoVID19) can appear. So, understanding immune system mechanisms, espacially in the context of virus infection have became a public health issue. In human species, virus infection are mostly managed by immune cells called plasmacytoïd dendritic cells (pDC). Thoses cells are huge producers of type 1 interferon, a very efficient alarming cytokine that put cells in a virus aware state, ready to resist to virus infection [[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10298684/). Several other proteins are synthetised by pDC, and this will allow a very specific immune response against the virus. Thus, in context of virus infection, these proteins produced by pDC are essential and so, really regulated. Among these regulatory mechanisms, alternative splicing remodelling could explain how pDC can adapt their response according to the virus they face. Such mechanisms have already been showned in others immune cells [[2]](https://pubmed.ncbi.nlm.nih.gov/34905508/) [[3]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230527/) [[4]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7912025/), but actually, mechanisms in pDC aren't still well known.
+Since the last few decades, urban expansion and human activities have led humans to interact with more and more species that we have ever face yet. This interaction with different species shows us that zoonoses (like virus CoVID19) can appear. So, understanding immune system mechanisms, especially in the context of viral infection have become a public health issue. In human species, viral infections are mostly managed by immune cells called plasmacytoid dendritic cells (pDC). Thoses cells are huge producers of type 1 interferon, a very efficient alarming cytokine that put cells in a virus-aware state, ready to resist viral infection [[1]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10298684/). Several other proteins are synthetised by pDC, and this will allow a very specific immune response against the virus. Thus, in context of viral infection, these proteins produced by pDC are essential and so, really regulated. Among these regulatory mechanisms, alternative splicing remodeling could explain how pDC can adapt their response according to the virus they face. Such mechanisms have already been showned in other immune cells [[2]](https://pubmed.ncbi.nlm.nih.gov/34905508/) [[3]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230527/) [[4]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7912025/), but as of now, mechanisms in pDC aren't well known.
 
 ### Dataset description
 
-In order to see if pDC present alternative splicing remodelling in context of virus infection, we have in our possession, a full dataset of RNA sequencing of pDC, according different conditions of stimulation. We use here Baby Hamster Kidney (BHK) cells infected with Dengue virus. Here, BHK cells are necessary to activate pDC as pDC can't be directly infected by virus (due to his high proportion of type 1 interferon produced). One set of samples are RNA from pDC activated by direct interaction with infected BHK cells via the formation of an interferogenic synapse [[5]](https://pubmed.ncbi.nlm.nih.gov/31003939/). The other set of sample are RNA from pDC activated by indirect interaction with the culture medium of infected BHK cells. For each set of sample we dispose of a non-infected condition (pDC interaction (direct or indirect) with a non-infected BHK cells) and a control condition (none interactions (either direct or indirect) between pDC and BHK cells). Moreover, non-infected condition is not the same as control condition because with this 2 separeted conditions this will allow us to discard any effect of pDC-BHK intection itself (regardless of the infection state of BHK cells) on the alternative splicing, who could bias our analysis. Finally, for every conditions, we have several biological replicates. Some of them are from a 2020 experiment but the major part of sample are from a 2023 experiment.
+In order to see if pDC presents alternative splicing remodeling in the context of viral infection, we have in our possession a full dataset of RNA sequencing of pDC, following different conditions of stimulation. We use here Baby Hamster Kidney (BHK) cells infected with Dengue virus. Here, BHK cells are necessary to activate pDC, as pDC can't be directly infected by virus (due to its high proportion of type 1 interferon produced). One set of samples are RNA from pDC activated by direct interaction with infected BHK cells via the formation of an interferogenic synapse [[5]](https://pubmed.ncbi.nlm.nih.gov/31003939/). The other set of samples are RNA from pDC activated by indirect interaction with the culture medium of infected BHK cells. For each set of samples, there is also a non-infected condition (pDC interaction (direct or indirect) with a non-infected BHK cells) and a control condition (no interaction (direct or indirect) between pDC and BHK cells). Moreover, the non-infected condition is not the same as the control condition. With these 2 separated conditions, we will be able to discard any effect of pDC-BHK interaction itself (regardless of the infection state of BHK cells) on the alternative splicing, which could create bias in our analysis. Finally, for every condition, we have several biological replicates. Some of them are from a 2020 experiment but the majorirty of the samples are from a 2023 experiment.
 
-Here is a summary scheme
+Here is a summary scheme:  
 ![img/Dataset_description.png](img/Dataset_description.png)
 
 
 ### Aims of this project
 
-Problematics for the project are first :
+Questions raised for the project are:
 
-1. Does quality and depth of dataset provide are sufficient to detect any signal of differential alternative splicing between conditions ?
+1. Are the quality and depth of the dataset sufficient to detect signals of differential alternative splicing between conditions?
 
-And if so :
+And if so:
 
-2. Is there alternative splicing remodelling between conditions ? And which genes are concerned ?
+2. Is there alternative splicing remodelling between conditions? And which transcripts are concerned?
 
 
-To respond to theses question asked by project leaders, we have set up a complete RNAseq analysis pipeline. But before that we have performed advanced preliminary analysis.
+To respond to these question asked by our project leaders, we have set up a complete RNAseq analysis pipeline. But before that, we have performed advanced preliminary analysis.
+
 
 
 
