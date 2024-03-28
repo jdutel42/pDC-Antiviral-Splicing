@@ -209,10 +209,10 @@ As we can see in the figure, all points are clustered together. It is impossible
 
 #### PCA on expressed gene counts
 
-pDC without BHK
+pDC without BHK  
 ![img/PCA_gene_count_pDC_without_BHK.jpeg](img/PCA_gene_count_pDC_without_BHK.jpeg)
 
-pDC with BHK
+pDC with BHK  
 ![img/PCA_gene_count_pDC_with_BHK.jpeg](img/PCA_gene_count_pDC_with_BHK.jpeg)
 
 Unlike PCA on transcript counts, PCA on expressed gene counts does show differential clusterization between conditions, which can be interpreted as a signal. Two things are to note however:
@@ -238,7 +238,7 @@ In the same way, we have found, in several _R2.fastq (reversed reads complementa
 ![img/Overexpressed_sequences_multiqc.png](img/Overexpressed_sequences_multiqc.png)
 
 With some researches, we have found that these overexpressed sequences are often found in sequencing data from Illumina sequencers NovaSeq/NextSeq. According to some users on [this](https://www.biostars.org/p/9499939/) BioStar forums "Poly-G reads represent cluster producing no signal in two-color chemistry" like we found in these sequencers. These informations are confirmed too on [this](https://www.researchgate.net/post/What_can_cause_poly-G_tails_on_NextSeq_fastq_from_seemingly_failed_libraries) ResearchGate forum. We think that may be the reasons of what we can see with G content in 3' end and with overexpressed sequences in our data.
-On the over side, the overrepresented sequences of "N" can indicate quality issues at certain locations within the sequences. These 2 files commes from a previous experiment realized in 2020. This can be observed in the following graph:
+On the over side, the overrepresented sequences of "N" can indicate quality issues at certain locations within the sequences. These 2 files commes from a previous experiment realized in 2020. This can be observed in the following graph:  
 
 ![img/PerBaseNContent.PNG](img/PerBaseNContent.PNG)
 
@@ -250,11 +250,13 @@ Moreover, on all of the .fastq files, as we can see on the picture bellow, there
 
 As presented in the next section, this has cause problems during the trimming steps and after for the alignement with STAR, because reads have been severly truncated with trimming steps, and this lead to a lots of very short reads.
 
-We have also found sequences with a heightened level of duplication:
+We have also found sequences with a heightened level of duplication:  
 
 ![img/DuplicationLevel.PNG](img/DuplicationLevel.PNG)
 
 These sequences all belong to the same condition: the non-infected pDC+BHK condition. Considering that our previous PCA plot showed a lack of clusterization, it is possible that this condition presented some issues in the sequencing.
+
+Overall, we learned two important facts about our dataset during this step. The first is that the 2020 samples cannot be used because of their differences with the 2023 dataset, which creates excess variability. The second is that the non-infected pDC+BHK condition is unexploitable because of the duplication levels. We must take this into account for the following steps.
 
 
  ***
@@ -283,6 +285,8 @@ In the end, we mapped these reads onto the human genome, hoping that the evoluti
 
 ***
 ## Conclusion
+
+We have indeed managed to identify at least two interesting, differentially spliced genes in IRF7 and ITGAL. However, while we do obtain a signal from our data, the resulting list of genes is very short. This could be corrected by increasing quality and strengthening coverage depth to extend the list of detected genes as well as increase our accuracy. This may require a new sequencing, especially of the pDC+BHK condition, which was troublesome due to the unexploitable nature of its non-infected samples.
 
 ***
 ## Contributors and Contacts
