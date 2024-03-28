@@ -149,14 +149,23 @@ In the same way, we have found, in several _R2.fastq (reversed reads complementa
 ![img/Overexpressed_sequences_multiqc.png](img/Overexpressed_sequences_multiqc.png)
 
 With some researches, we have found that these overexpressed sequences are often found in sequencing data from Illumina sequencers NovaSeq/NextSeq. According to some users on [this](https://www.biostars.org/p/9499939/) BioStar forums "Poly-G reads represent cluster producing no signal in two-color chemistry" like we found in these sequencers. These informations are confirmed too on [this](https://www.researchgate.net/post/What_can_cause_poly-G_tails_on_NextSeq_fastq_from_seemingly_failed_libraries) ResearchGate forum. We think that may be the reasons of what we can see with G content in 3' end and with overexpressed sequences in our data.
-On the over side, the overrepresented sequences of "N" can indicate quality issues at certain locations within the sequences. These 2 files commes from a previous experiment realize in 2020.
+On the over side, the overrepresented sequences of "N" can indicate quality issues at certain locations within the sequences. These 2 files commes from a previous experiment realized in 2020. This can be observed in the following graph:
+
+![img/PerBaseNContent.PNG](img/PerBaseNContent.PNG)
+
 As these overexpressed sequences are not highly expressed in our dataset (only around ~0.20% of total sequences), this will not bias our analysis, and with a trimming step, these sequences will be removed. But it seems important to us to understand from what this can arise from, can this have an impact on our analysis, and inform project leader that this could probably happen in their next analysis.
 
 Moreover, on all of the .fastq files, as we can see on the picture bellow, there is a high amount of adapters even in the middle of reads. 
 
 ![img/Adapter_content.png](img/Adapter_content.png)
 
-As prensented in the next section, this has cause problems during the trimming steps and after for the alignement with STAR, because reads have been severly truncated with trimming steps, and this lead to a lots of very short reads.
+As presented in the next section, this has cause problems during the trimming steps and after for the alignement with STAR, because reads have been severly truncated with trimming steps, and this lead to a lots of very short reads.
+
+We have also found sequences with a heightened level of duplication:
+
+![img/DuplicationLevel.PNG](img/DuplicationLevel.PNG)
+
+These sequences all belong to the same condition: the non-infected pDC+BHK condition. Considering that our previous PCA plot showed a lack of clusterization, it is possible that this condition presented some issues in the sequencing.
 
 
  
