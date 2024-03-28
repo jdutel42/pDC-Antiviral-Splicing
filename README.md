@@ -288,6 +288,13 @@ In the end, we mapped these reads onto the human genome, hoping that the evoluti
 
 ### 3. Rmats
 
+RMATS gives us a list of exons for each possible alternative splicing event. 
+
+For data with indirect activation, the first step was to sort these out so that they were significant. To do this, we used 2 criteria: a false discovery rate (FDR) below the 5% threshold and an inclusion difference level greater than 0.5. The second step was to select the significant exons specifically linked to infection. To do this, we performed an RMATS analysis between control and uninfected conditions to obtain an A list of differentially spliced genes. We then performed an RMATS analysis between control and infected conditions to obtain a B list of differentially spliced genes. The final candidate gene list is list B without the elements of list A. 
+
+For data with direct activation, as the condition, as the uninfected experimental condition is not usable (probably due to a sequencing problem detected in the quality analysis step) we have restricted ourselves to performing an RMATS analysis between the control and infected conditions and filtering the significant exons from the rmats output. The list of candidate genes obtained is a list of differentially spliced genes, but we can't say whether these differential splicing events are linked to infection.
+
+
 ***
 ## Functional analysis
 
