@@ -6,7 +6,6 @@
   - [Context](#context) 
   - [Dataset description](#dataset-description) 
   - [Aims of this project](#aims-of-this-project)
-
 - [Preliminary Analysis](#preliminary-analysis)
   - [GO Diagram](#go-diagram)
   - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
@@ -14,7 +13,6 @@
     - [PCA on expressed gene counts](#pca-on-expressed-gene-counts)
   - [Fastq Screen](#fastq-screen)
   - [Quality Control](#quality-control)
-
 - [Pipeline](#Pipeline)
   - [Control quality and trimming](#1-quality-control-and-trimming)
     - [FastQC](#11-fastqc)
@@ -23,19 +21,13 @@
   - [Mapping](#2-mapping)
   - [Detection of alternative splicing events](#3-detection-of-alternative-splicing-events)
   - [Results representation](#4-results-representation)
- 
 - [Results](#results)
   - [Mapping](#mapping)
   - [rMATS](#rmats)
-
 - [Functional analysis](#functional-analysis)
-
 - [Conclusion](#conclusion)
-
 - [Contributors and Contacts](#contributors-and-contacts)
-
 - [Ressources](#ressources)
-
 - [References](#references)
 
 ***
@@ -275,7 +267,7 @@ Overall, we learned two important facts about our dataset during this step. The 
 
 
 ## Results
-### 1. Mapping
+### Mapping
 
  
 
@@ -289,7 +281,7 @@ Nevertheless, for data with direct activation, the alignment scores are aroud 50
 For data with indirect activation, one of the main difficulties was to sort reads from hamster BHK cells human pDC cells'reads. Our first approach was to create a concatenated index of the human and hamser genomes and map the reads onto it. This would have enabled us to perform a fairer sort and subsequently maximize the mapping of pDC reads to the human genome. Unfortunately, due to material limitations, this track could not be fully tested.
 In the end, we mapped these reads onto the human genome, hoping that the evolutionary distance between hamster and human would be long enough for the hamster reads not to be able to map onto each other and sort them this way. The results for this approach are that alignment scores are highly variable between samples (10% to 50%), and in some cases very low, making downstream analysis more complicated. This is probably due to the fact that the proportion of hamster reads is highly variable between samples, and overall much higher than the number of human reads (visible on the FastQ Screen).
 
-### 3. Rmats
+### rMATS
 
 RMATS gives us a list of exons for each possible alternative splicing event. 
 
