@@ -171,7 +171,7 @@ These sequences all belong to the same condition: the non-infected pDC+BHK condi
  
 
 ***
-## Pipeline and results
+## Pipeline
 
 After, these preliminary analyses we conducted the full pipeline. First, we performed trimming of adapters and poor-quality reads using the Trimmomatic tool. These cleaned reads were then mapped against the human genome via a splice-aware mapper, STAR. Afterwards, these mapped reads were given to rMATS, a software for detecting alternative splicing events. rMATS outputs different types of events, and we have visualized all of this with various tools such as IGV and rmats2sashimiplot.
 
@@ -264,15 +264,17 @@ rmats2sashimiplot -o output_directory --l1 7010 --l2 7014 --event-type SE -e SE.
   - `--b1 / --b2`: Path to .bam files output by STAR.
 
 ***
-
-
+## Results
+### 1. Mapping
+### 3. Rmats
 
 ***
+##Functional analysis
 
+***
 ## Conclusion
 
 ***
-
 ## Contributors and Contacts
 
 ### **Project contributors**
