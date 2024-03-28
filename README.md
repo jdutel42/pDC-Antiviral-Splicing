@@ -297,7 +297,7 @@ For data with direct activation, as the uninfected experimental condition is not
 
 Here is a table summarizing the lists of candidate genes obtained:
 
-![img/Pipeline_flowchart.png](img/Alternative_splicing_events_results)
+![img/Alternative_splicing_events_results](img/Alternative_splicing_events_results)
 
 
 ***
