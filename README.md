@@ -299,11 +299,11 @@ It should be noted that the IRF7 gene is already known in the literature to be i
 ## Functional analysis
 
 
-ITGAL is an integrin and is therefore involved in the establishment of interferogenic synapses. But it is also essential for immune system processes such as leukocyte lesioning at the endothelium and T-cell cytotoxicity. It is also involved in lymphopoiesis (i.e. all the successive stages of differentiation of immune cells in the bone marrow).
+ITGAL is an integrin and is therefore involved in the establishment of interferogenic synapses. But it is also essential for immune system processes such as leukocyte lesioning at the endothelium and T-cell cytotoxicity. It is also involved in lymphopoiesis (i.e. all the successive stages of differentiation of immune cells in the bone marrow).[[6]](https://www.uniprot.org/)
 
-IRF7 is a transcriptional regulator and is involved in all type I interferon (IFN)-dependent immune responses. More generally, it has a critical role in innate immune defense against DNA and RNA viruses. Indeed, when there is a viral infection or signaling by TLRs (Toll-like receptors), IRF7 is phosphorylated, dimerized and will localize at the level of the nucleus where it can regulate gene expression.
+IRF7 is a transcriptional regulator and is involved in all type I interferon (IFN)-dependent immune responses. More generally, it has a critical role in innate immune defense against DNA and RNA viruses. Indeed, when there is a viral infection or signaling by TLRs (Toll-like receptors), IRF7 is phosphorylated, dimerized and will localize at the level of the nucleus where it can regulate gene expression.[[6]](https://www.uniprot.org/)
 
-The other genes present in the candidate gene lists encode non-coding RNAs. However, they are interesting because some of them encode RNAs involved in the functioning of the protein machinery carrying out alternative splicing. thus they can have an effect on the alternative splicing of a gene but indirectly (like HNRNPD or ARHGAP4)
+The other genes present in the candidate gene lists encode non-coding RNAs. However, they are interesting because some of them encode RNAs involved in the functioning of the protein machinery carrying out alternative splicing. thus they can have an effect on the alternative splicing of a gene but indirectly (like HNRNPD or ARHGAP4). [[6]](https://www.uniprot.org/)
 
 ***
 ## Conclusion
@@ -350,7 +350,7 @@ Vincent Lacroix, Team Baobab, LBBE (vincent.lacroix@univ-lyon1.fr)
 - [[3]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230527/) Hurtado-Guerrero, Isaac et al. “Antiviral, Immunomodulatory and Antiproliferative Activities of Recombinant Soluble IFNAR2 without IFN-ß Mediation.” Journal of clinical medicine vol. 9,4 959. 31 Mar. 2020, doi:10.3390/jcm9040959
 - [[4]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7912025/) Xu, Xiaofang et al. “Alternative mRNA Processing of Innate Response Pathways in Respiratory Syncytial Virus (RSV) Infection.” Viruses vol. 13,2 218. 31 Jan. 2021, doi:10.3390/v13020218
 - [[5]](https://pubmed.ncbi.nlm.nih.gov/31003939/) Assil, Sonia et al. “Plasmacytoid Dendritic Cells and Infected Cells Form an Interferogenic Synapse Required for Antiviral Responses.” Cell host & microbe vol. 25,5 (2019): 730-745.e6. doi:10.1016/j.chom.2019.03.005
--  [[6]](https://www.uniprot.org/) The UniProt Consortium, UniProt: the Universal Protein Knowledgebase in 2023, Nucleic Acids Res. 51:D523–D531 (2023)
+- [[6]](https://www.uniprot.org/) The UniProt Consortium, UniProt: the Universal Protein Knowledgebase in 2023, Nucleic Acids Res. 51:D523–D531 (2023)
 
 
 
