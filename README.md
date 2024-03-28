@@ -299,6 +299,9 @@ Here is a table summarizing the lists of candidate genes obtained:
 
 ![img/Alternative_splicing_events_results.png](img/Alternative_splicing_events_results.png)
 
+it should be noted that the IRF7 gene is already known in the literature to be involved in IFN pathway modulation, so it's reassuring to find it here.
+
+
 
 ***
 ## Functional analysis
