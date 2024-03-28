@@ -97,9 +97,15 @@ As we can see in the figure, all points are clustered together. It is impossible
 
 #### PCA on expressed gene counts
 
+pDC without BHK
 ![img/PCA_gene_count_pDC_without_BHK.jpeg](img/PCA_gene_count_pDC_without_BHK.jpeg)
+
+pDC with BHK
 ![img/PCA_gene_count_pDC_with_BHK.jpeg](img/PCA_gene_count_pDC_with_BHK.jpeg)
-A décrire
+
+Unlike PCA on transcript counts, PCA on expressed gene counts does show differential clusterization between conditions, which can be interpreted as a signal. Two things are to note however:
+- In both the pDC samples and pDC+BHK samples, the inf_1 element deviates from the rest of the condition, which could imply it is abherrant.
+- In the pDC+BHK samples, the non_inf condition does not clusterize properly. This may indicate a serious variability issue in the condition itself.
 
 ### FastqScreen
 
