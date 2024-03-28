@@ -16,7 +16,7 @@
   - [Quality Control](#quality-control)
 
 - [Pipeline](#Pipeline)
-  - [Control quality and trimming](#1-control-quality-and-trimming)
+  - [Control quality and trimming](#1-quality-control-and-trimming)
     - [FastQC](#11-fastqc)
     - [MultiQC](#12-multiqc)
     - [Trimmomatic](#13-trimmomatic)
