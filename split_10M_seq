@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Vérifier le nombre d'arguments
+if [ "$#" -lt 1  ]; then #-lt: est plus petit que $#: nb d'arguments
+    echo "Aucun fichier fastq.gz en paramètre! "
+    exit 1
+fi
+
+# Créer le répertoire de sortie s'il n'existe pas
+output_directory="dataset_reduit"
+mkdir -p "$output_directory" #-p:création du répertoire automatiquement si besoin 
+
+# Parcourir tous les fichiers passés en paramètre
+for input_file in "$@"; do
+    # Vérifier si le fichier existe
+    if [ ! -f "$input_file" ]; then #-f: le fichier est un fichier ordinaire; ni un répertoire ni un fichier périphérique
+        echo "Le fichier $input_file n'existe pas ou n'est pas valide."
+        continue 
+    fi
+
+    # Extraire le nom de base du fichier sans le chemin ni l'extension
+    base_name=$(basename "$input_file" .fastq.gz)
+
+    # Extraire les 10 000 premières séquences
+    output_file="$output_directory/first10M_$base_name.fastq.gz"
+    zcat "$input_file" | head -n 40000 | gzip > "$output_file"
+
+    echo "Les 10 000 premières séquences de $input_file ont été extraites dans $output_file"
+done
+
