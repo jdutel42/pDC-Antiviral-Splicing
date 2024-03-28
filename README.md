@@ -228,11 +228,13 @@ Unlike PCA on transcript counts, PCA on expressed gene counts does show differen
 - In both the pDC samples and pDC+BHK samples, the inf_1 element deviates from the rest of the condition, which could imply it is abherrant.
 - In the pDC+BHK samples, the non_inf condition does not clusterize properly. This may indicate a serious variability issue in the condition itself.
 
-### FastqScreen
+### Fastq Screen
 
 BHK Contaminant
 
 Finally, in the condition, pDC+BHK, we want to see if pDC in direct contact with BHK (infected or non infected cells) could lead to different alternatives splicing events. BHK are cells that come from hamster species (nom de l'espèce). However, in order to perform analysis, we need first to remove some of BHK contaminants transferred to pDC during the contact. Indeed, during the interferogenic synapse, some RNA of BHK could be transferred to the pDC and contaminate the RNA of pDC. A solution to discard these RNA is to mapped these mixed RNA (pDC and BKH) on the hamster genome to remove all reads that mapped on this genome and so, corresponding to contaminants RNA. Then we use the dataset pDC+BKH separated from BHK originated reads, and pursue the pipeline established. This is necessary if we don’t want to be biased and wrongly allocate expression of genes from BHK to pDC. THis could interfere with conclusions. 
+
+### Quality Control
 
 
 ##### Interpretation
