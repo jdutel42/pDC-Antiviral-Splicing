@@ -298,6 +298,11 @@ it should be noted that the IRF7 gene is already known in the literature to be i
 ***
 ## Functional analysis
 
+
+ITGAL is an integrin and is therefore involved in the establishment of interferogenic synapses. But it is also essential for immune system processes such as leukocyte lesioning at the endothelium and T-cell cytotoxicity. It is also involved in lymphopoiesis (i.e. all the successive stages of differentiation of immune cells in the bone marrow).
+
+IRF7 is a transcriptional regulator and is involved in all type I interferon (IFN)-dependent immune responses. More generally, it has a critical role in innate immune defense against DNA and RNA viruses. Indeed, when there is a viral infection or signaling by TLRs (Toll-like receptors), IRF7 is phosphorylated, dimerized and will localize at the level of the nucleus where it can regulate gene expression.
+
 ***
 ## Conclusion
 
