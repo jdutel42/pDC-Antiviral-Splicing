@@ -303,6 +303,8 @@ ITGAL is an integrin and is therefore involved in the establishment of interfero
 
 IRF7 is a transcriptional regulator and is involved in all type I interferon (IFN)-dependent immune responses. More generally, it has a critical role in innate immune defense against DNA and RNA viruses. Indeed, when there is a viral infection or signaling by TLRs (Toll-like receptors), IRF7 is phosphorylated, dimerized and will localize at the level of the nucleus where it can regulate gene expression.
 
+The other genes present in the candidate gene lists encode non-coding RNAs. However, they are interesting because some of them encode RNAs involved in the functioning of the protein machinery carrying out alternative splicing. thus they can have an effect on the alternative splicing of a gene but indirectly (like HNRNPD or ARHGAP4)
+
 ***
 ## Conclusion
 
