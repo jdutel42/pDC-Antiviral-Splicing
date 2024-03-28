@@ -5,13 +5,17 @@
 - [Introduction](#introduction)
   - [Context](#context) 
   - [Dataset description](#dataset-description) 
-  - [Aims of this project](#aims-of-this-project) 
+  - [Aims of this project](#aims-of-this-project)
+
 - [Preliminary Analysis](#preliminary-analysis)
   - [GO Diagram](#go-diagram)
   - [Principal Component Analysis (PCA)](#principal-component-analysis-pca)
     - [PCA on transcript counts](#pca-on-transcript-counts)
-    - [PCA on expressed gene counts](#pca-on-expressed-gene-counts) 
-- [Workflow and pipeline](#workflow-and-pipeline)
+    - [PCA on expressed gene counts](#pca-on-expressed-gene-counts)
+  - [Fastq Screen](#fastq-screen)
+  - [Quality Control](#quality-control)
+
+- [Pipeline](#Pipeline)
   - [Control quality and trimming](#1-control-quality-and-trimming)
     - [FastQC](#11-fastqc)
     - [MultiQC](#12-multiqc)
@@ -20,15 +24,19 @@
   - [Detection of alternative splicing events](#3-detection-of-alternative-splicing-events)
   - [Results representation](#4-results-representation)
  
-- [Challenges](#challenges)
-  - [Reads Quality](#reads-quality)
-  - [Alignment](#alignment)
-  - [BHK Contaminant](#bhk-contaminant)
+- [Results](#results)
+  - [Mapping](#mapping)
+  - [rMATS](#rmats)
+
+- [Functional analysis](#functional-analysis)
 
 - [Conclusion](#conclusion)
+
 - [Contributors and Contacts](#contributors-and-contacts)
+
 - [Ressources](#ressources)
 
+- [References](#references)
 
 ***
 
