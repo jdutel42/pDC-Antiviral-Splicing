@@ -93,8 +93,6 @@ The PCA can be seen here :
 
 ![img/PCA_transcripts.jpeg](img/PCA_transcripts.jpeg)
 
-Interprétation : 
-
 As we can see in the figure, all points are clustered together. It is impossible to distinguish and separate the different conditions from each other. This could be interpreted as a lack of signal in our data between conditions. However, we must take these results with a pinch of salt. Indeed, maybe somehow, our PCA on transcripts is not well executed or something that we didn’t understand could lead to these specific results. It is difficult to have a clear conclusion and further analysis need to be done to say that there is no signal in our dataset, yet this can be a first clue for a sequencing depth too low to see differences between conditions. 
 
 #### PCA on expressed gene counts
