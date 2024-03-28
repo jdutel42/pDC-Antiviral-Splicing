@@ -349,7 +349,9 @@ Vincent Lacroix, Team Baobab, LBBE (vincent.lacroix@univ-lyon1.fr)
 - [[2]](https://pubmed.ncbi.nlm.nih.gov/34905508/) Li, Xiaobo et al. “An alternatively spliced STING isoform localizes in the cytoplasmic membrane and directly senses extracellular cGAMP.” The Journal of clinical investigation vol. 132,3 (2022): e144339. doi:10.1172/JCI144339
 - [[3]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7230527/) Hurtado-Guerrero, Isaac et al. “Antiviral, Immunomodulatory and Antiproliferative Activities of Recombinant Soluble IFNAR2 without IFN-ß Mediation.” Journal of clinical medicine vol. 9,4 959. 31 Mar. 2020, doi:10.3390/jcm9040959
 - [[4]](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7912025/) Xu, Xiaofang et al. “Alternative mRNA Processing of Innate Response Pathways in Respiratory Syncytial Virus (RSV) Infection.” Viruses vol. 13,2 218. 31 Jan. 2021, doi:10.3390/v13020218
-- [[5]](https://pubmed.ncbi.nlm.nih.gov/31003939/) Assil, Sonia et al. “Plasmacytoid Dendritic Cells and Infected Cells Form an Interferogenic Synapse Required for Antiviral Responses.” Cell host & microbe vol. 25,5 (2019): 730-745.e6. doi:10.1016/j.chom.2019.03.005 
+- [[5]](https://pubmed.ncbi.nlm.nih.gov/31003939/) Assil, Sonia et al. “Plasmacytoid Dendritic Cells and Infected Cells Form an Interferogenic Synapse Required for Antiviral Responses.” Cell host & microbe vol. 25,5 (2019): 730-745.e6. doi:10.1016/j.chom.2019.03.005
+-  [[6]](https://www.uniprot.org/) The UniProt Consortium, UniProt: the Universal Protein Knowledgebase in 2023, Nucleic Acids Res. 51:D523–D531 (2023)
+
 
 
 
