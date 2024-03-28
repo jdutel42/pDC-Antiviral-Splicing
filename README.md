@@ -107,13 +107,6 @@ BHK Contaminant
 
 Finally, in the condition, pDC+BHK, we want to see if pDC in direct contact with BHK (infected or non infected cells) could lead to different alternatives splicing events. BHK are cells that come from hamster species (nom de l'espèce). However, in order to perform analysis, we need first to remove some of BHK contaminants transferred to pDC during the contact. Indeed, during the interferogenic synapse, some RNA of BHK could be transferred to the pDC and contaminate the RNA of pDC. A solution to discard these RNA is to mapped these mixed RNA (pDC and BKH) on the hamster genome to remove all reads that mapped on this genome and so, corresponding to contaminants RNA. Then we use the dataset pDC+BKH separated from BHK originated reads, and pursue the pipeline established. This is necessary if we don’t want to be biased and wrongly allocate expression of genes from BHK to pDC. THis could interfere with conclusions. 
 
-***
-## Pipeline and results
-
-After, these preliminary analyses we conducted the full pipeline. First, we performed trimming of adapters and poor-quality reads using the Trimmomatic tool. These cleaned reads were then mapped against the human genome via a splice-aware mapper, STAR. Afterwards, these mapped reads were given to rMATS, a software for detecting alternative splicing events. rMATS outputs different types of events, and we have visualized all of this with various tools such as IGV and rmats2sashimiplot.
-
-![img/Pipeline_flowchart.png](img/Pipeline_flowchart.png)
-
 ### 1. Control quality and trimming
 
 #### 1.1. FastQC
@@ -159,6 +152,15 @@ Moreover, on all of the .fastq files, as we can see on the picture bellow, there
 
 As prensented in the next section, this has cause problems during the trimming steps and after for the alignement with STAR, because reads have been severly truncated with trimming steps, and this lead to a lots of very short reads.
 
+
+ 
+
+***
+## Pipeline and results
+
+After, these preliminary analyses we conducted the full pipeline. First, we performed trimming of adapters and poor-quality reads using the Trimmomatic tool. These cleaned reads were then mapped against the human genome via a splice-aware mapper, STAR. Afterwards, these mapped reads were given to rMATS, a software for detecting alternative splicing events. rMATS outputs different types of events, and we have visualized all of this with various tools such as IGV and rmats2sashimiplot.
+
+![img/Pipeline_flowchart.png](img/Pipeline_flowchart.png)
 
 
 #### 1.3. Trimmomatic
