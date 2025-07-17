@@ -339,7 +339,7 @@ Vincent Lacroix, Team Baobab, LBBE (vincent.lacroix@univ-lyon1.fr)
 
 - [FastQC](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/ "FastQC site")
 - [MultiQC](https://multiqc.info/ "MultiQC site")
-- [FastqScreen](#https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/)
+- [FastqScreen](https://www.bioinformatics.babraham.ac.uk/projects/fastq_screen/)
 - [STAR](https://github.com/alexdobin/STAR "STAR GitHub")
 - [rMATS](https://github.com/Xinglab/rmats-turbo "rMATS-turbo GitHub")
 - [rMATS2sashimiplot](https://github.com/Xinglab/rmats2sashimiplot "rMATS2sashimiplot GitHub")
