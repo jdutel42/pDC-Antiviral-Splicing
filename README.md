@@ -1,5 +1,7 @@
 # Bio-informatic Project_2
 
+This project was carried out during the first year of the Bioinformatics Master's program at Claude Bernard Lyon 1 University. We collaborated with Delphine Galiana (CIRI) to investigate the innate immune response to viral infections, focusing on the role of plasmacytoid dendritic cells (pDCs) and the impact of alternative splicing in their antiviral response. The [Specification report](Delivrable/Specification_Report_Project2_Dutel_Paradan_Larbi.pdf) is available in the Deliverables folder. The results of our analysis are presented below.
+
 ## Table of contents
 
 - [Introduction](#introduction)
